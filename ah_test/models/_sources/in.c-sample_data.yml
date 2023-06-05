@@ -1,0 +1,35 @@
+version: 2
+sources:
+    - name: in.c-sample_data
+      freshness:
+        warn_after:
+            count: 1
+            period: day
+      database: '{{ env_var("DBT_KBC_AH_TEST_DATABASE") }}'
+      schema: in.c-sample_data
+      loaded_at_field: '"_timestamp"'
+      tables:
+        - name: account
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
+        - name: level
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
+        - name: opportunity
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
+        - name: user
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []

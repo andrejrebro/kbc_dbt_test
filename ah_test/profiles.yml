@@ -1,0 +1,12 @@
+send_anonymous_usage_stats: false
+ah_test:
+    target: ah_test
+    outputs:
+        ah_test:
+            account: '{{ env_var("DBT_KBC_AH_TEST_ACCOUNT") }}'
+            database: '{{ env_var("DBT_KBC_AH_TEST_DATABASE") }}'
+            password: '{{ env_var("DBT_KBC_AH_TEST_PASSWORD") }}'
+            schema: '{{ env_var("DBT_KBC_AH_TEST_SCHEMA") }}'
+            type: '{{ env_var("DBT_KBC_AH_TEST_TYPE") }}'
+            user: '{{ env_var("DBT_KBC_AH_TEST_USER") }}'
+            warehouse: '{{ env_var("DBT_KBC_AH_TEST_WAREHOUSE") }}'
