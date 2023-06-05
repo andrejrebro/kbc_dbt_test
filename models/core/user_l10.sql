@@ -18,4 +18,4 @@ select
     l."Level"
 FROM src_user u
 LEFT JOIN src_level l
-  ON l."Name"=u."Name"
+  ON l.user_name=u.user_name
